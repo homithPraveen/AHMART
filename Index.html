@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AH-MART — Premium Store</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       LOADING SCREEN
+  ════════════════════════════════════════════ -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">AH-MART</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">AH<span>MART</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#products" class="nav-link">Products</a></li>
+        <li><a href="#categories" class="nav-link">Categories</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Dark/Light mode toggle -->
+        <button class="icon-btn" id="themeToggle" title="Toggle theme">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+
+        <!-- Cart button -->
+        <button class="icon-btn cart-btn" id="cartToggle" title="Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" title="Menu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO SECTION
+  ════════════════════════════════════════════ -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow"><span class="eyebrow-dot"></span> New Collection 2026</p>
+      <h1 class="hero-title">
+        Elevate Your<br />
+        <em>Everyday Style</em>
+      </h1>
+      <p class="hero-subtitle">Curated premium goods — from minimal tech to refined living. Discover pieces that last.</p>
+      <div class="hero-cta">
+        <a href="#products" class="btn btn-primary">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#featured" class="btn btn-ghost">View Featured</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>12k+</strong><span>Products</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>98%</strong><span>Satisfaction</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>50+</strong><span>Brands</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card hero-card-main">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&q=80" alt="Premium Watch" />
+        <div class="hero-card-label">Best Seller</div>
+      </div>
+      <div class="hero-card hero-card-sm hero-card-top">
+        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=200&q=80" alt="Sneakers" />
+      </div>
+      <div class="hero-card hero-card-sm hero-card-bot">
+        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=200&q=80" alt="Perfume" />
+      </div>
+    </div>
+    <a href="#products" class="hero-scroll">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CATEGORIES SECTION
+  ════════════════════════════════════════════ -->
+  <section id="categories" class="categories-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Browse by</p>
+        <h2 class="section-title">Categories</h2>
+      </div>
+      <div class="categories-grid">
+        <div class="category-card" data-filter="watches">
+          <div class="cat-icon"><i class="fa-solid fa-clock"></i></div>
+          <h3>Watches</h3>
+          <p>3 items</p>
+        </div>
+        <div class="category-card" data-filter="footwear">
+          <div class="cat-icon"><i class="fa-solid fa-shoe-prints"></i></div>
+          <h3>Footwear</h3>
+          <p>3 items</p>
+        </div>
+        <div class="category-card" data-filter="fragrance">
+          <div class="cat-icon"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+          <h3>Fragrance</h3>
+          <p>2 items</p>
+        </div>
+        <div class="category-card" data-filter="tech">
+          <div class="cat-icon"><i class="fa-solid fa-laptop"></i></div>
+          <h3>Tech</h3>
+          <p>2 items</p>
+        </div>
+        <div class="category-card" data-filter="bags">
+          <div class="cat-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <h3>Bags</h3>
+          <p>2 items</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PRODUCTS SECTION
+  ════════════════════════════════════════════ -->
+  <section id="products" class="products-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Our Collection</p>
+        <h2 class="section-title">All Products</h2>
+      </div>
+
+      <!-- Search + Filter Bar -->
+      <div class="products-toolbar">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" placeholder="Search products…" autocomplete="off" />
+          <button class="search-clear" id="searchClear" title="Clear"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="filter-tabs" id="filterTabs">
+          <button class="filter-tab active" data-cat="all">All</button>
+          <button class="filter-tab" data-cat="watches">Watches</button>
+          <button class="filter-tab" data-cat="footwear">Footwear</button>
+          <button class="filter-tab" data-cat="fragrance">Fragrance</button>
+          <button class="filter-tab" data-cat="tech">Tech</button>
+          <button class="filter-tab" data-cat="bags">Bags</button>
+        </div>
+      </div>
+
+      <!-- No results message -->
+      <div class="no-results" id="noResults" style="display:none;">
+        <i class="fa-solid fa-face-frown-open"></i>
+        <p>No products found. Try a different search or filter.</p>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FEATURED SECTION
+  ════════════════════════════════════════════ -->
+  <section id="featured" class="featured-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Hand-picked</p>
+        <h2 class="section-title">Featured Products</h2>
+      </div>
+      <div class="featured-grid" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT SECTION
+  ════════════════════════════════════════════ -->
+  <section id="about" class="about-section">
+    <div class="container about-container">
+      <div class="about-visual">
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80" alt="Our Store" />
+        <div class="about-badge">
+          <strong>10+</strong>
+          <span>Years of Excellence</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <p class="section-eyebrow">Our Story</p>
+        <h2 class="section-title">Crafted With<br /><em>Purpose</em></h2>
+        <p>SHOPHAUS was founded with a single belief: that quality and design should never be a compromise. We source only the finest products from around the world, curated for people who value the art of living well.</p>
+        <p>Every item in our collection passes through a rigorous selection process — ensuring it's not just beautiful, but built to last.</p>
+        <div class="about-features">
+          <div class="about-feat"><i class="fa-solid fa-shield-halved"></i><span>2-Year Warranty</span></div>
+          <div class="about-feat"><i class="fa-solid fa-truck-fast"></i><span>Free Shipping Over $100</span></div>
+          <div class="about-feat"><i class="fa-solid fa-arrow-rotate-left"></i><span>30-Day Returns</span></div>
+          <div class="about-feat"><i class="fa-solid fa-headset"></i><span>24/7 Support</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TESTIMONIALS
+  ════════════════════════════════════════════ -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">What People Say</p>
+        <h2 class="section-title">Testimonials</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"The watch I ordered arrived beautifully packaged and exceeded every expectation. SHOPHAUS has become my go-to for premium gifts."</p>
+          <div class="testimonial-author">
+            <img src="https://i.pravatar.cc/50?img=11" alt="Alex M." />
+            <div><strong>Alex M.</strong><span>Verified Buyer</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card testimonial-featured">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"I've been shopping here for two years and never once been disappointed. The product quality is extraordinary and delivery is always on time."</p>
+          <div class="testimonial-author">
+            <img src="https://i.pravatar.cc/50?img=5" alt="Priya S." />
+            <div><strong>Priya S.</strong><span>Premium Member</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+          <p>"Stylish, fast shipping, and great customer service when I had a sizing question. The sneakers are worth every penny."</p>
+          <div class="testimonial-author">
+            <img src="https://i.pravatar.cc/50?img=33" alt="Jordan K." />
+            <div><strong>Jordan K.</strong><span>Verified Buyer</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       NEWSLETTER
+  ════════════════════════════════════════════ -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-box">
+        <div class="newsletter-content">
+          <p class="section-eyebrow">Stay Updated</p>
+          <h2>Join the Inner Circle</h2>
+          <p>Get early access to new arrivals, exclusive discounts, and curated style guides — delivered to your inbox.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <div class="newsletter-input-group">
+            <input type="email" placeholder="Enter your email address" required />
+            <button type="submit" class="btn btn-primary">Subscribe <i class="fa-solid fa-paper-plane"></i></button>
+          </div>
+          <p class="newsletter-disclaimer"><i class="fa-solid fa-lock"></i> No spam. Unsubscribe any time.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT SECTION
+  ════════════════════════════════════════════ -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Reach Out</p>
+        <h2 class="section-title">Contact Us</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item"><i class="fa-solid fa-location-dot"></i><div><strong>Address</strong><span>42 Commerce Ave, New York, NY 10001</span></div></div>
+          <div class="contact-item"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><span>hello@shophaus.com</span></div></div>
+          <div class="contact-item"><i class="fa-solid fa-phone"></i><div><strong>Phone</strong><span>+1 (800) 746-7428</span></div></div>
+          <div class="contact-item"><i class="fa-solid fa-clock"></i><div><strong>Hours</strong><span>Mon–Sat: 9am – 8pm EST</span></div></div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+          </div>
+          <input type="text" placeholder="Subject" />
+          <textarea placeholder="Your message…" rows="5" required></textarea>
+          <button type="submit" class="btn btn-primary">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">AH<span>MART</span></a>
+        <p>Premium goods for the discerning individual. Quality is not an option — it's our standard.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#products">All Products</a></li>
+          <li><a href="#featured">Featured</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Sale</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Track Order</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 SHOPHAUS. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Settings</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       CART SIDEBAR
+  ════════════════════════════════════════════ -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart <span id="cartCount">(0)</span></h3>
+      <button class="icon-btn" id="cartClose"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <p>Your cart is empty.</p>
+        <a href="#products" class="btn btn-primary" id="cartShopBtn">Start Shopping</a>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">$0.00</strong>
+      </div>
+      <div class="cart-subtotal">
+        <span>Shipping</span>
+        <strong id="cartShipping">Free</strong>
+      </div>
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+      <button class="btn btn-primary btn-full" id="checkoutBtn">Checkout <i class="fa-solid fa-lock"></i></button>
+      <button class="btn btn-ghost btn-full" id="clearCartBtn">Clear Cart</button>
+    </div>
+  </aside>
+
+  <!-- ═══════════════════════════════════════════
+       PRODUCT QUICK-VIEW MODAL
+  ════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal" id="productModal">
+    <button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal-body" id="modalBody">
+      <!-- Filled by JS -->
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
